@@ -1,0 +1,83 @@
+/* Modernes, responsives Grundlayout für dein Portfolio */
+
+:root {
+  --primary: #2a4365;
+  --secondary: #f7fafc;
+  --accent: #4299e1;
+  --text: #22223b;
+  --footer: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--secondary);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: var(--primary);
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+nav {
+  background: var(--accent);
+  padding: 1rem;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: var(--footer);
+}
+
+main {
+  flex: 1;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(42, 67, 101, 0.07);
+}
+
+footer {
+  background: var(--footer);
+  color: var(--primary);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.95rem;
+  margin-top: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  header {
+    padding: 1.2rem 0.5rem;
+    font-size: 1.1rem;
+  }
+  main {
+    margin: 1rem 0.5rem;
+    padding: 0.7rem;
+  }
+  nav {
+    padding: 0.7rem;
+  }
+}
