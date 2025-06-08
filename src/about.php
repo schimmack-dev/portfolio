@@ -7,7 +7,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Zusätzliche Abstände für die Lesbarkeit */
+        header h1 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .header-img {
+            width: 90px;
+            height: 90px;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+            object-fit: cover;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .header-img {
+                width: 64px;
+                height: 64px;
+            }
+        }
+
         main section {
             margin-bottom: 2.5rem;
         }
@@ -30,7 +58,10 @@
 
 <body>
     <header>
-        <h1>Über mich</h1>
+        <h1>
+            Über mich
+            <img src="images/programmierer.png" alt="Programmierer" class="header-img">
+        </h1>
     </header>
     <nav>
         <a href="index.php">Startseite</a>
