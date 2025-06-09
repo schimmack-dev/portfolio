@@ -22,6 +22,9 @@
             src="images/programmierer.png"
             alt="Programmierer Illustration"
             style="width:100%;max-width:600px;display:block;margin:2rem auto 2rem auto;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.12);">
+        <div id="tageszitat" style="text-align:center;font-style:italic;color:#4299e1;margin:1.5rem 0;">
+            Lade Tageszitat ...
+        </div>
         <p style="text-align:center;font-style:italic;color:#666;">Mein Weg als Programmierer beginnt!</p>
     </main>
     <footer>
