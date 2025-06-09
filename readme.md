@@ -27,11 +27,9 @@ src/
   about.php
   contact.php
   style.css
-  script.js
+  script.js      # Zeigt ein zufälliges Tageszitat an
   images/
     programmierer.png
-docker-compose.yml
-readme.md
 ```
 
 ---
