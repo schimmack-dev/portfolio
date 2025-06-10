@@ -52,10 +52,50 @@
             text-align: center;
             margin-bottom: 1rem;
         }
+
+        .kontakt-fehler {
+            color: #e53e3e;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
     </style>
 </head>
 
 <body>
+    <?php
+    // --- Datenbankverbindung (Docker-Setup) ---
+    $host = 'db';
+    $db   = 'portfolio';
+    $user = 'user';
+    $pass = 'userpass';
+    $charset = 'utf8mb4';
+
+    $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+    $options = [
+        PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+        PDO::ATTR_EMULATE_PREPARES   => false,
+    ];
+
+    $erfolg = null;
+    $fehlermeldung = '';
+
+    if ($_SERVER["REQUEST_METHOD"] === "POST") {
+        try {
+            $pdo = new PDO($dsn, $user, $pass, $options);
+            $stmt = $pdo->prepare("INSERT INTO kontaktanfragen (name, email, nachricht) VALUES (?, ?, ?)");
+            $stmt->execute([
+                $_POST['name'],
+                $_POST['email'],
+                $_POST['nachricht']
+            ]);
+            $erfolg = true;
+        } catch (Exception $e) {
+            $erfolg = false;
+            $fehlermeldung = $e->getMessage();
+        }
+    }
+    ?>
     <header>
         <h1>Kontakt</h1>
     </header>
@@ -65,12 +105,14 @@
         <a href="contact.php" class="active">Kontakt</a>
     </nav>
     <main>
-        <?php
-        // Einfache Erfolgsmeldung nach dem Absenden (ohne echte Mailfunktion)
-        if ($_SERVER["REQUEST_METHOD"] === "POST") {
-            echo '<div class="kontakt-erfolg">Vielen Dank für deine Nachricht!</div>';
-        }
-        ?>
+        <?php if ($erfolg === true): ?>
+            <div class="kontakt-erfolg">Vielen Dank für deine Nachricht!</div>
+        <?php elseif ($erfolg === false): ?>
+            <div class="kontakt-fehler">
+                Fehler beim Speichern. Bitte versuche es erneut.<br>
+                <?php echo htmlspecialchars($fehlermeldung); ?>
+            </div>
+        <?php endif; ?>
         <form class="kontakt-formular" method="post" action="contact.php">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" required>
@@ -85,7 +127,7 @@
         </form>
     </main>
     <footer>
-        &copy; <?php echo date("Y"); ?> Enrico
+        &copy; <?php echo date("Y"); ?> Schimmack-Dev
     </footer>
     <script src="script.js"></script>
 </body>

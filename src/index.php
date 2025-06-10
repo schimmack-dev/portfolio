@@ -28,7 +28,7 @@
     <p style="text-align:center;font-style:italic;color:#666;">Mein Weg als Programmierer beginnt!</p>
 </main>
     <footer>
-        &copy; <?php echo date("Y"); ?> Dein Name
+        &copy; <?php echo date("Y"); ?> Schimmack-Dev
     </footer>
     <script src="script.js"></script>
 </body>

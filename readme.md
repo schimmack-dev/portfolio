@@ -50,6 +50,9 @@ src/
 3. **Im Browser öffnen:**  
    [http://localhost:8080](http://localhost:8080)
 
+   **phpadmin
+   http://localhost:8081 
+
 ---
 
 ## Nächste Schritte

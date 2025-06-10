@@ -115,7 +115,7 @@
         </p>
     </main>
     <footer>
-        &copy; <?php echo date("Y"); ?> Enrico
+        &copy; <?php echo date("Y"); ?> Schimmack-Dev
     </footer>
     <script src="script.js"></script>
 </body>
