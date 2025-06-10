@@ -13,9 +13,11 @@ Hier dokumentiere ich meinen Weg als Programmier-Anfänger und zeige meine Forts
   - Responsive Design
   - Navigation zwischen mehreren Seiten
   - Eigene „Über mich“-Seite
-  - Kontaktformular (in Planung)
+  - Kontaktformular mit Speicherung in MySQL
   - Bild eines Programmierers auf der Startseite
+  - Tageszitat per JavaScript
   - Übersicht über Projekte und Lernfortschritte
+  - Datenbankverwaltung mit phpMyAdmin
 
 ---
 
@@ -30,6 +32,9 @@ src/
   script.js      # Zeigt ein zufälliges Tageszitat an
   images/
     programmierer.png
+docker-compose.yaml
+Dockerfile
+readme.md
 ```
 
 ---
@@ -48,17 +53,19 @@ src/
    ```
 
 3. **Im Browser öffnen:**  
-   [http://localhost:8080](http://localhost:8080)
-
-   **phpadmin
-   http://localhost:8081 
+   - [http://localhost:8080](http://localhost:8080) (Webseite)
+   - [http://localhost:8081](http://localhost:8081) (phpMyAdmin, Login: user / userpass)
 
 ---
 
-## Nächste Schritte
+## Nächste Schritte / Projektideen
 
-- Kontaktformular mit PHP und Validierung
-- Projekte aus einer MySQL-Datenbank laden
+- Blog-Funktion für eigene Beiträge
+- ToDo-Liste mit PHP und MySQL
+- Bildergalerie
+- Gästebuch
+- Login-/Registrierungssystem
+- Dark/Light-Mode
 - Weitere Tools und Features ergänzen
 
 ---
