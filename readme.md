@@ -8,7 +8,7 @@ Hier dokumentiere ich meinen Weg als Programmier-Anfänger und zeige meine Forts
 ## Projektüberblick
 
 - **Ziel:** Eigene Portfolio-Webseite als Lernprojekt
-- **Technologien:** PHP, MySQL, Docker, HTML, CSS, JavaScript
+- **Technologien:** PHP, MySQL, Docker, Git, HTML, CSS, JavaScript
 - **Features:**
   - Responsive Design
   - Navigation zwischen mehreren Seiten
