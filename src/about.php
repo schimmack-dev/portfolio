@@ -67,6 +67,7 @@
         <a href="index.php">Startseite</a>
         <a href="about.php" class="active">Über mich</a>
         <a href="contact.php">Kontakt</a>
+        <a href="admin.php">Admin</a>
     </nav>
     <main>
         <section>

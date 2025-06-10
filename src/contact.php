@@ -103,6 +103,7 @@
         <a href="index.php">Startseite</a>
         <a href="about.php">Über mich</a>
         <a href="contact.php" class="active">Kontakt</a>
+        <a href="admin.php">Admin</a>
     </nav>
     <main>
         <?php if ($erfolg === true): ?>
